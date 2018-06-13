@@ -1,0 +1,8 @@
+{
+	"name" : "SyntheseCSSExtender",
+	"description" : "Pivot table extension with some cool features.",
+	"icon" : "pivot-table",
+	"type" : "visualization",
+	"version": "0.1",
+	"author": "Developed by Bogdan Lozyak for Synthèse"
+}
