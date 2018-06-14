@@ -205,7 +205,7 @@ define([
 
 			var outCSS = "";
 			
-			outCSS += " .cell.header.top { font-size: 20px; color: magenta; ";
+			outCSS += " .cell.header.top { ";
 			outCSS += layout.ColHeaderBold 	 ? "font-weight: bold; " : "font-weight: normal; ";
 			outCSS += layout.ColHeaderItalic ? "font-style: italic; " : "font-style: normal; ";
 			outCSS += "font-size: "+layout.ColHeaderFontSize+"px; ";
@@ -214,7 +214,7 @@ define([
 			outCSS += "text-align: "+layout.ColHeaderAlignText+"; ";
 			outCSS += " } ";
 
-			outCSS += "	tr.cell.header.last-top-row { font-size: 20px; color: red; } ";
+//			outCSS += "	tr.cell.header.last-top-row { font-size: 20px; color: red; } ";
 
 			outCSS += " .cell.header.left:not(.parent) { ";
 			outCSS += layout.ColDimensionsBold 	 ? "font-weight: bold; " : "font-weight: normal; ";
