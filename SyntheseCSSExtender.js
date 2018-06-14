@@ -15,7 +15,8 @@ define([
 			type: "items",
 			component: "accordion",
 			items: {
-				apparence: {
+				customsSections: {
+					component: "expandable-items",
 					label: "Settings",
 					items: {
 						ColHead: {
@@ -181,26 +182,6 @@ define([
 									min: 8,
 									max: 50,
 									step: 1
-								},
-								DataAlignTxt: {
-									type: "string",
-									label: "Align text",
-									component: "buttongroup",
-									ref: "DataAlignText",
-									options: [{
-										value: "left",
-										label: "Left",
-										tooltip: "Align text left"
-									}, {
-										value: "center",
-										label: "Center",
-										tooltip: "Center text"
-									},{
-										value: "right",
-										label: "Right",
-										tooltip: "Align text right"
-									}],
-									defaultValue: "center"
 								}
 							}
 						}	
@@ -244,7 +225,7 @@ define([
 			outCSS += "text-align: "+layout.ColDimensionsAlignText+"; ";
 			outCSS += " } ";
 
-			outCSS += " .cell.data { font-size: 14px; color: blue; }";
+//			outCSS += " .cell.data { font-size: 14px; color: blue; }";
 
 			outCSS += " .cell.data { ";
 			outCSS += layout.DataBold 	 ? "font-weight: bold; " : "font-weight: normal; ";
@@ -252,7 +233,6 @@ define([
 			outCSS += "font-size: "+layout.DataFontSize+"px; ";
 			outCSS += "color: "+layout.DataTextColor.color+"; ";
 			outCSS += "background-color: "+layout.DataBackgroundColor.color + "; ";
-			outCSS += "text-align: "+layout.DataAlignText+"; ";
 			outCSS += " } ";
 
 			var myStyle = $("<style>");
